@@ -11,6 +11,8 @@ const imgModal = document.querySelector(".img-modal")
 const descTitle = document.querySelector(".desc-title")
 const descDate = document.querySelector(".desc-date")
 const descText = document.querySelector(".desc-text")
+const closeX = document.querySelector(".close")
+const randomize = document.querySelector(".randomize")
 
 fetch(`${baseURL}?api_key=${key}&count=${count}`)
   .then(res => res.json())
@@ -43,6 +45,22 @@ console.log(arr)
 
 // ----------------------------------------------------------
 
+randomize.addEventListener("click", e => { location.reload() })
+randomize.addEventListener("mouseover", e => {
+  randomize.style.textDecoration = "underline"
+})
+randomize.addEventListener("mouseout", e => {
+  randomize.style.textDecoration = "none"
+})
+
+closeX.addEventListener("click", toggleModel)
+closeX.addEventListener("mouseover", e => {
+  closeX.src = "img/close-x-white.png"
+})
+closeX.addEventListener("mouseout", e => {
+  closeX.src = "img/close-x-gray.png"
+})
+
 document.querySelector("#img1").addEventListener("click", loadModal0)
 document.querySelector("#img2").addEventListener("click", loadModal1)
 document.querySelector("#img3").addEventListener("click", loadModal2)
@@ -54,6 +72,11 @@ document.querySelector("#img8").addEventListener("click", loadModal7)
 document.querySelector("#img9").addEventListener("click", loadModal8)
 document.querySelector("#img10").addEventListener("click", loadModal9)
 
+
+function toggleModel(e) {
+  modal.classList.toggle("hidden")
+}
+
 function setModal(i) {
   let obj = arr[i]
   imgModal.style.backgroundImage = `url(${obj.hdurl})`
@@ -64,50 +87,50 @@ function setModal(i) {
 
 function loadModal0(e) {
   setModal(0)
-  modal.classList.toggle("hidden")
+  toggleModel(e)
 }
 
 function loadModal1(e) {
   setModal(1)
-  modal.classList.toggle("hidden")
+  toggleModel(e)
 }
 
 function loadModal2(e) {
   setModal(2)
-  modal.classList.toggle("hidden")
+  toggleModel(e)
 }
 
 function loadModal3(e) {
   setModal(3)
-  modal.classList.toggle("hidden")
+  toggleModel(e)
 }
 
 function loadModal4(e) {
   setModal(4)
-  modal.classList.toggle("hidden")
+  toggleModel(e)
 }
 
 function loadModal5(e) {
   setModal(5)
-  modal.classList.toggle("hidden")
+  toggleModel(e)
 }
 
 function loadModal6(e) {
   setModal(6)
-  modal.classList.toggle("hidden")
+  toggleModel(e)
 }
 
 function loadModal7(e) {
   setModal(7)
-  modal.classList.toggle("hidden")
+  toggleModel(e)
 }
 
 function loadModal8(e) {
   setModal(8)
-  modal.classList.toggle("hidden")
+  toggleModel(e)
 }
 
 function loadModal9(e) {
   setModal(9)
-  modal.classList.toggle("hidden")
+  toggleModel(e)
 }

@@ -5,18 +5,28 @@ body {
   grid-template-rows: 70px 1fr;
   grid-template-columns: 100%;
   margin: 0;
+  background-color: #000000;
 }
 
 header {
-  border: solid red;
-  background-color: black;
-  color: white;
+  display: flex;
+  justify-content: space-between;
+  font-family: "Russo One";
+  padding: 10px;
+  color: #FFFFFF;
   grid-area: 1;
 }
 
+.title {
+  display: flex;
+  align-items: center;
+}
+
+.title img {
+  height: 60px;
+}
+
 main {
-  /* border: solid red; */
-  background-color: black;
   grid-area: 2;
   height: 100%;
   display: flex;
@@ -47,8 +57,19 @@ main {
   margin-top: -250px;
   margin-left: -500px;
   display: flex;
-  background-color: black;
-  border: solid white;
+  background-color: #000000;
+  border: solid #FFFFFF;
+  box-shadow: 0 0 100px 50px #000000;
+}
+
+.close {
+  z-index: 2;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 0;
+  right: 0;
+  margin: 10px;
 }
 
 .img-modal {
@@ -66,7 +87,19 @@ main {
 }
 
 .desc * {
-  color: white;
+  color: #FFFFFF;
+  font-family: Helvetica;
+}
+
+.desc-date {
+  font-weight: bold;
+}
+
+.desc-text {
+  /* border: solid orange; */
+  overflow: scroll;
+  height: 65%;
+  line-height: 1.3em;
 }
 
 .hidden {
