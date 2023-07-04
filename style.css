@@ -1,0 +1,39 @@
+body {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 70px 1fr;
+  grid-template-columns: 100%;
+  margin: 0;
+}
+
+header {
+  border: solid red;
+  background-color: black;
+  color: white;
+  grid-area: 1;
+}
+
+main {
+  /* border: solid red; */
+  background-color: black;
+  grid-area: 2;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.row {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.img {
+  /* border: solid blue; */
+  width: 19%;
+  padding-top: 19%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
