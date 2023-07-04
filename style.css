@@ -12,7 +12,9 @@ header {
   display: flex;
   justify-content: space-between;
   font-family: "Russo One";
-  padding: 10px;
+  padding-top: 5px;
+  padding-left: 15px;
+  padding-right: 30px;
   color: #FFFFFF;
   grid-area: 1;
 }
@@ -24,6 +26,10 @@ header {
 
 .title img {
   height: 60px;
+}
+
+.randomize {
+  align-self: center;
 }
 
 main {
@@ -96,7 +102,6 @@ main {
 }
 
 .desc-text {
-  /* border: solid orange; */
   overflow: scroll;
   height: 65%;
   line-height: 1.3em;
