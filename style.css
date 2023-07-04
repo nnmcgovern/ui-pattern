@@ -30,10 +30,45 @@ main {
 }
 
 .img {
-  /* border: solid blue; */
   width: 19%;
   padding-top: 19%;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.modal {
+  z-index: 1;
+  position: absolute;
+  height: 500px;
+  width: 1000px;
+  top: 50%;
+  left: 50%;
+  margin-top: -250px;
+  margin-left: -500px;
+  display: flex;
+  background-color: black;
+  border: solid white;
+}
+
+.img-modal {
+  width: 50%;
+  padding-top: 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.desc {
+  width: 50%;
+  height: 100%;
+  margin: 10px;
+}
+
+.desc * {
+  color: white;
+}
+
+.hidden {
+  display: none !important;
 }
