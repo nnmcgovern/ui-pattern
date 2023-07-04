@@ -1,1 +1,2 @@
 # ui-pattern
+The ui pattern I implemented for this project was the modal. This website uses data from NASA's APOD (Astronomy Picture of the Day) API. On load, ten images from the API are displayed in two rows. When the user clicks on an image, a modal pops up with further information about the image including the image's title, the date that it was designated the "Astronomy Picture of the Day," and a brief explanation of the image's contents.
