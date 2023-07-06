@@ -43,6 +43,7 @@ main {
 .row {
   display: flex;
   justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 
 .img {
@@ -109,4 +110,77 @@ main {
 
 .hidden {
   display: none !important;
+}
+
+@media screen and (max-width: 768px) {
+  .img {
+    width: 32%;
+    padding-top: 32%;
+  }
+
+  .title h1 {
+    font-size: 25px;
+  }
+
+  .title img {
+    height: 50px;
+  }
+
+  .modal {
+    width: 700px;
+    height: 800px;
+    margin-top: -200px;
+    margin-left: -350px;
+  }
+
+  .desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .img {
+    width: 49%;
+    padding-top: 49%;
+  }
+
+  .title h1 {
+    font-size: 25px;
+  }
+
+  .title img {
+    height: 55px;
+  }
+
+  .modal {
+    width: 500px;
+    height: 1000px;
+    margin-top: -150px;
+    margin-left: -250px;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .img-modal {
+    width: 99%;
+    padding-top: 99%;
+    margin-top: 5px;
+  }
+
+  .desc {
+    width: fit-content;
+    justify-content: flex-start;
+  }
+
+  .desc * {
+    margin: 3px 0 3px 0;
+    height: fit-content;
+  }
+
+  .desc-text {
+    height: 55%;
+    font-size: 1.2em;
+  }
 }
